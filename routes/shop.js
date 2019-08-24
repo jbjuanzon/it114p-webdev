@@ -1,10 +1,12 @@
 const express = require('express');
-const pathUtil = require('../util/path');
 const router = express.Router();
 
 
-router.get('/',(req,res) => {
-   res.sendFile(pathUtil.views+'shop.html');
+router.get('/', (req, res) => {
+   res.render('shop', {
+      pageTitle: 'Shop',
+      path: '/'
+   });
 });
 
 module.exports = router;
