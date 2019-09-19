@@ -6,6 +6,8 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bulma/css')));
+
 const shopRoutes = require('./routes/shop');
 const adminRoutes = require('./routes/admin');
 
